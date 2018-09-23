@@ -1,0 +1,6 @@
+---
+
+- name: Cloning VM {{New_VM_Name}} from {{Source_VM_Name}}
+  command: virt-clone --original {{Source_VM_Name}} --name {{New_VM_Name}} --auto-clone
+- name:    Starting VM
+  command: virsh start {{New_VM_Name}}
