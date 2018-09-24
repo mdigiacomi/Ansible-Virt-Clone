@@ -1,5 +1,7 @@
 ---
 
+- name: Viewing List of Current Domains
+  command: bash -c "virsh list --all"
 - name: Cloning VM {{New_VM_Name}} from {{Source_VM_Name}}
   command: bash -c "virt-clone --original {{Source_VM_Name}} --name {{New_VM_Name}} --auto-clone"
 - name:    Starting VM
