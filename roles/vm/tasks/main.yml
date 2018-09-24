@@ -4,7 +4,7 @@
   command: bash -c "virsh list --all"
   become: true
 - name: Cloning VM {{New_VM_Name}} from {{Source_VM_Name}}
-  command: bash -c "virt-clone --original {{Source_VM_Name}} --name {{New_VM_Name}} --auto-clone"
+  command: bash -c "virt-clone --original {{Source_VM_Name}} --name {{New_VM_Name}} --file {{New_VM_Location}}/{{New_VM_Name}}.img --auto-clone"
   become: true
 - name:    Starting VM
   command: bash -c "virsh start {{New_VM_Name}}"
