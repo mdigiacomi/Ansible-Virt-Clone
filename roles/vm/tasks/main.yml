@@ -9,3 +9,10 @@
 - name:    Starting VM
   command: bash -c "virsh start {{New_VM_Name}}"
   become: true
+- name: Checking Server is active
+  wait_for:
+    port: 22
+    host: {{New_VM_Temp_IP}}
+    search_regex: OpenSSH
+    delay: 30
+  connection: local
