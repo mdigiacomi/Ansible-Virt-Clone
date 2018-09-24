@@ -3,3 +3,4 @@
 
 Source_VM_Name: 'U18_Ansible_Template'
 New_VM_Location: '/var/lib/libvirt/images_ext/'
+New_VM_Temp_IP: '192.168.0.10'
